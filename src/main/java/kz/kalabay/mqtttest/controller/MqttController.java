@@ -16,6 +16,7 @@ public class MqttController {
     public String publish(@PathVariable String message) throws MqttException {
         mqttConfig.publishMessage(message);
         return "Published message: " + message;
+
     }
     @GetMapping("/subscribe")
     public String subscribe(String topic) throws MqttException {
